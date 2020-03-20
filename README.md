@@ -21,7 +21,7 @@ Kyuho Han, et al., CRISPR screens in cancer spheroids identify 3D growth-specifi
 (1) Combine four fastq.gz files with the same header, but four different flow cell lane numbers
 into single fastq.gz file. This works for all fastq.gz files in a designated folder
 
-python GetSingleReadFastq.py <folder with demultiplexed fastq.gz files from bcl2fastq demultiplexing>
+python GetSingleReadFastq.py <folder with demultiplexed fastq.gz files>
 
 ex) python GetSingleReadFastq.py ../fastq/Batch_retest/
 
