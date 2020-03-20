@@ -9,7 +9,8 @@ Email Kyuho Han (kyuho@medic-life-sciences.com) for more info.
 Copyright (c) 2020, Kyuho Han
 
 Redistribution and use in source are permitted as long as the copyright notice above is included
-If you use these scripts please cite:
+
+If you use these scripts please cite the following paper :
 Kyuho Han, et al., CRISPR screens in cancer spheroids identify 3D growth-specific vulnerabilities, Nature, 2020
 
 
