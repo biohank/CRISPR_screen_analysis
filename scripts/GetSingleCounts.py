@@ -1,9 +1,11 @@
 #####################################################################
 #####################################################################
 
-## Go to /mnt/lab_data/bassik/kyuhohan/Kyuho_Screening_Analysis/scripts/
-## python <script> <folder that contains all fastq.gz files> <output folder>
-## python GetSingleCounts.py /mnt/lab_data/bassik/kyuhohan/NextSeq/bcl2fastq/Lung_3d_batch/ /mnt/lab_data/bassik/kyuhohan/Kyuho_Screening_Analysis/counts/180527_Lung_3d_Retest/ Lung3D_Retest
+## (2) Align fastq.gz files against an index file of a sgRNA library to generate count files
+
+## Go to scripts
+## python GetSingleCounts.py <folder with fastq.gz files processed in step (1)> <output file> <header of bowtie index file in "indices" folder>
+## ex) python GetSingleCounts.py ../fastq/Batch_retest/ ../counts/Batch_retest/ Lung3D_Retest
 
 #####################################################################
 #####################################################################

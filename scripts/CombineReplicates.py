@@ -1,10 +1,15 @@
-#####################################################################################
-# Kyuho Han (Some codes are adapted from David Morgen's scripts)
-# 10/10/2017
-# Compare two count files to calculate normalized log fold enrichment of sgRNAs
-#####################################################################################
-# run CombineReplicates.py ../results/20171031_KRAS_3D/T0_vs_D19_2D_U1 ../results/20171031_KRAS_3D/T0_vs_D19_2D_U1 ../results/20171031_KRAS_3D/T0_vs_D19_2D_U_Combo
-# run CombineReplicates.py ../results/20171009_SL_Screens/Plas_vs_D15_Unt1 ../results/20171009_SL_Screens/Plas_vs_D15_Unt2 ../results/20171009_SL_Screens/Plas_vs_D15_Unt_Combo
+#####################################################################
+#####################################################################
+
+## (5) Combine two replicates to calculate gene phenotypes
+
+## python CombineReplicates.py <sgRNA enrichment csv file> <output file>
+
+## ex) python CombineReplicates.py ../results/Batch_retest/T0_vs_Day21_23_rep1 ../results/Batch_retest/T0_vs_Day21_23_rep2 ../results/Batch_retest/T0_vs_Day21_23_combo
+
+#####################################################################
+#####################################################################
+
 
 from __future__ import division
 

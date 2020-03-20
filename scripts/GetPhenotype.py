@@ -1,14 +1,16 @@
-#####################################################################################
-# Kyuho Han (Some codes are adapted from David Morgen's scripts)
-# 10/10/2017
-# Compare two count files to calculate normalized log fold enrichment of sgRNAs
-#####################################################################################
+#####################################################################
+#####################################################################
 
-# run GetPhenotype.py ../results/20171031_KRAS_3D/T0_vs_D19_2D_U1
-# run GetPhenotype.py ../results/20171208_Youngtae/D16_CONT_A_vs_D16_IRA_A -m
+## (4) Calculate gene phenotypes (calculate the median enrichment score of all sgRNAs that target a gene)
 
-# run GetPhenotype.py ../results/20171009_SL_Screens/Plas_vs_D15_Unt1
-# run GetPhenotype.py ../results/20171009_SL_Screens/Plas_vs_D15_Unt2
+## python GetPhenotype.py <sgRNA enrichment csv file>
+
+## ex) python GetPhenotype.py ../results/Batch_retest/T0_vs_Day21_23_rep1
+## ex) python GetPhenotype.py ../results/Batch_retest/T0_vs_Day21_23_rep2
+
+#####################################################################
+#####################################################################
+
 
 from __future__ import division
 

@@ -1,13 +1,15 @@
-#####################################################################################
-# Kyuho Han (Some codes are adapted from David Morgen's scripts)
-# 10/10/2017
-# Compare two count files to calculate normalized log fold enrichment of sgRNAs
-#####################################################################################
-# run GetEnrichment.py ../counts/20171009_SL_Screens/20171009_SL_Plas_pgDouble_Final.counts ../counts/20171009_SL_Screens/20171009_SL_D15_Unt1_pgDouble_Final.counts ../results/20171009_SL_Screens/Plas_vs_D15_Unt1
-# run GetEnrichment.py ../counts/20171009_SL_Screens/20171009_SL_Plas_pgDouble_Final.counts ../counts/20171009_SL_Screens/20171009_SL_D15_Unt2_pgDouble_Final.counts ../results/20171009_SL_Screens/Plas_vs_D15_Unt2
+#####################################################################
+#####################################################################
 
-# run GetEnrichment.py ../counts/20171031_KRAS_3D/T0_counts.csv ../counts/20171031_KRAS_3D/D19_2D_U1_counts.csv ../results/20171031_KRAS_3D/T0_vs_D19_2D_U1 -gt single -ct 10
-# run GetEnrichment.py ../counts/20171208_Youngtae/D16_CONT_A_counts.csv ../counts/20171208_Youngtae/D16_IRA_A_counts.csv ../results/20171208_Youngtae/D16_CONT_A_vs_D16_IRA_A -gt single -ct 10
+## (3) Compare two count files to calculate enrichment (log fold enrichment) scores of sgRNAs가
+
+## Go to scripts
+## python GetEnrichment.py <count file 1> <count file 2> <outputfile> -gt single -ct <threshold for sgRNA count>
+## ex) python GetEnrichment.py ../counts/Batch_retest/T0_23_r1.counts ../counts/Batch_retest/Day21_23_rep1_r1.counts ../results/Batch_retest/T0_vs_Day21_23_rep1 -gt single -ct 10
+
+#####################################################################
+#####################################################################
+
 
 from __future__ import division
 
