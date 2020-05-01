@@ -1,12 +1,9 @@
 #####################################################################
 #####################################################################
 
-## (1) Combine four fastq.gz files with the same header, but four different flow cell lane numbers
-## into single fastq.gz file. This works for all fastq.gz files in a designated folder
-
-## Go to scripts
-## python <script> <folder that contains all fastq.gz files>
-## python GetSingleReadFastq.py ../fastq/Batch_retest/
+## Go to /mnt/lab_data/bassik/kyuhohan/Kyuho_Screening_Analysis/scripts/
+## python <script> <folder that contains all fastq.gz files> <output folder>
+## python GetSingleCounts.py /mnt/lab_data/bassik/kyuhohan/NextSeq/bcl2fastq/Lung_3d_batch/ /mnt/lab_data/bassik/kyuhohan/Kyuho_Screening_Analysis/counts/180527_Lung_3d_Retest/ Lung3D_Retest
 
 #####################################################################
 #####################################################################
@@ -17,8 +14,6 @@ import sys
 import csv
 import os
 import argparse
-import HTSeq
-from collections import defaultdict
 import time
 
 def sorteddict2tab(dict,file):
@@ -32,7 +27,7 @@ def sorteddict2tabline(dict,file):
         tableWriter.writerow([key] + dict[key])
 
 def execute(command):
-    print command
+    print(command)
     subprocess.call(shlex.split(command))
 
 # Initiates argument parser
@@ -56,7 +51,7 @@ file_headers = []
 for root, dirs, files in os.walk(seq_folder):
     for fil in files:
         if fil.endswith('fastq.gz'):            
-            Temp = fil.split('_')[:-4]
+            Temp = fil.split('_')[:-3]
             header = ''
             for tmp in Temp:
                 header=header+tmp
@@ -66,6 +61,10 @@ for root, dirs, files in os.walk(seq_folder):
             file_headers.append(header)
         
 file_headers = list(set(file_headers))
+
+for temp_head in file_headers:
+    print(temp_head)
+
 
 #####################################################################
 ### concaternate, unzip, align gz files,  ###########################
@@ -101,7 +100,7 @@ for header in file_headers:
         
         # 2) unzip
         try:
-            subprocess.check_call('gunzip ' + file_out + header + '_R1_all.fastq.gz -f', shell=True)
+            subprocess.check_call('gzip ' + file_out + header + '_R1_all.fastq.gz -f', shell=True)
         except:
             sys.exit('Shell error')
         
