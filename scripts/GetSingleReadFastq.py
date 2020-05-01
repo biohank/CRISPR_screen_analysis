@@ -3,7 +3,6 @@
 
 ## Go to /mnt/lab_data/bassik/kyuhohan/Kyuho_Screening_Analysis/scripts/
 ## python <script> <folder that contains all fastq.gz files> <output folder>
-## python GetSingleCounts.py /mnt/lab_data/bassik/kyuhohan/NextSeq/bcl2fastq/Lung_3d_batch/ /mnt/lab_data/bassik/kyuhohan/Kyuho_Screening_Analysis/counts/180527_Lung_3d_Retest/ Lung3D_Retest
 
 #####################################################################
 #####################################################################
