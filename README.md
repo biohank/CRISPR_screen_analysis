@@ -22,7 +22,7 @@ Kyuho Han, et al., CRISPR screens in cancer spheroids identify 3D growth-specifi
 
 	python GetSingleReadFastq.py <folder with demultiplexed fastq.gz files> <output folder for combined fastq>
 
-	ex) python GetSingleReadFastq.py ../fastq/3D_Batch_Retest/ ../fastq/3D_Batch_Retest_All/
+	ex) python GetSingleReadFastq.py ../fastq/Batch_Retest/ ../fastq/Batch_Retest_All/
 
 (2) Align fastq.gz files against an index file of a sgRNA library to generate count files
 
