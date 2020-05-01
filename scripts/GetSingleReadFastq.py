@@ -95,12 +95,12 @@ for header in file_headers:
         except:
             sys.exit('Shell error')
             
-        print('Unzipping read one'+' : '+header)
+#         print('Unzipping read one'+' : '+header)
         
-        # 2) unzip
-        try:
-            subprocess.check_call('gzip ' + file_out + header + '_R1_all.fastq.gz -f', shell=True)
-        except:
-            sys.exit('Shell error')
+#         # 2) unzip
+#         try:
+#             subprocess.check_call('gzip ' + file_out + header + '_R1_all.fastq.gz -f', shell=True)
+#         except:
+#             sys.exit('Shell error')
         
 print('Finished')
